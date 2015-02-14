@@ -1,0 +1,15 @@
+<h1>{{ heading }}</h1>
+<div id="scales">
+  <p>
+    <button class="btn btn-primary" ng-repeat="scale in scales" ng-click="addScale(scale)">{{ scale }}</button>
+    <button class="btn btn-warning" ng-click="undo()">Undo</button>
+    <button class="btn btn-danger" ng-click="clear()">Clear</button>
+  </p>
+
+  <div ng-show="totalScaleCount">
+    <h3>Total Scale Count: <b>{{ totalScaleCount }}</b></h3>
+    <br/>
+    <h3>History</h3>
+    <p><span ng-repeat="scale in scaleHistory track by $index"> {{ scale }} <br></span></p>
+  </div>
+</div>

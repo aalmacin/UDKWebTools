@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <title>UDK tools</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <meta charset="UTF-8" />
+    <script data-require="angular.js@*" data-semver="1.4.0-beta.4" src="https://code.angularjs.org/1.4.0-beta.4/angular.js"></script>
+    <script>
+      var myApp = angular.module("myApp", []);
+    </script>
+    <script src="ScaleCtrl.js"></script>
+    <script src="UnrealUnitCtrl.js"></script>
+    <style>
+      #scales p button {
+        margin-right: 1%;
+        margin-bottom: 1%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid text-center">
+      <div class="row" ng-controller="UnrealUnitCtrl">
+        <div ng-include="'UnrealUnit.html'"></div>
+      </div>
+      <div class="row" ng-controller="ScaleCtrl">
+        <div ng-include="'ScaleCalculator.html'"></div>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,15 @@
+<h1>{{ heading }}</h1>
+<table class="table-responsive table-striped col-md-12">
+  <form name="unrealConverter">
+    <tr>
+      <th>Unreal Unit</th>
+      <th>Feet/Foot</th>
+      <th>Meter(s)</th>
+    </tr>
+    <tr>
+      <td><input class="form-control" ng-model="unrealUnit" ng-change="unrealUpdate(unrealUnit)" /></td>
+      <td><input class="form-control" disabled ng-model="foot" ng-change="unrealUpdate(unrealUnit)" /></td>
+      <td><input class="form-control" disabled ng-model="meter" /></td>
+    </tr>
+  </form>
+</table>
